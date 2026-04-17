@@ -136,7 +136,7 @@ def analyze_pattern(pattern_item, processed_filters, performance_data):
     input_data = pattern_item.get("input", [])
     expected = normalize_label(pattern_item.get("expected"))
 
-    print(f"- -- {key} ---")
+    print(f"--- {key} ---")
 
     size = validate_pattern_key(key)
     if size is None:
@@ -196,9 +196,9 @@ def print_performance_summary(performance_data):
 
 def print_result_summary(results):
     # Принт тест пасс-фейл суммари.
-    print("\n#---------------------------------------")
-    print("# [4] 결과 요약")
-    print("#---------------------------------------")
+    print("\n---------------------------------------")
+    print("[4] 결과 요약")
+    print("---------------------------------------")
 
     total_count = len(results)
     pass_count = sum(1 for result in results if result["status"] == "PASS")
